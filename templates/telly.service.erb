@@ -1,0 +1,23 @@
+i############################################
+# WARNING:
+# Managed by puppet - DO NOT modify locally.
+############################################
+
+[Unit]
+Description=Telly Daemon
+After=network.target
+
+[Service]
+User=<%= scope['::telly::user'] %>
+Group=<%= scope['::telly::group'] %>
+Type=simple
+Restart=always
+RestartSec=5
+TimeoutStopSec=20
+ExecStart=/opt/telly/telly --config <%= scope['::telly::config'] %> --web.base-address <%= @facts['networking']['ip'] %>:<%= scope['::telly::port'] %>
+#ExecReload=/bin/kill -s HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
+
+
