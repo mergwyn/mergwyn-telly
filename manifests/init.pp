@@ -11,6 +11,7 @@ class telly (
   String                  $user             = 'telly',
   String                  $group            = 'telly',
   String                  $install_path     = '/opt',
+  String                  $config_dir       = '/etc/telly',
   String                  $config           = 'telly.config.toml',
   Integer                 $streams          = 1,
   Integer                 $starting_channel = 10000,

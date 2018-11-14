@@ -14,7 +14,7 @@ Type=simple
 Restart=always
 RestartSec=5
 TimeoutStopSec=20
-ExecStart=<%= scope['::telly::install_path'] %>/telly/telly --config <%= scope['::telly::config'] %> --web.base-address <%= @facts['networking']['ip'] %>:<%= scope['::telly::port'] %>
+ExecStart=<%= scope['::telly::install_path'] %>/telly/telly --config.file <%= scope['::telly::config_dir'] %>//<%= scope['::telly::config'] %> --web.base-address <%= @facts['networking']['ip'] %>:<%= scope['::telly::port'] %>
 #ExecReload=/bin/kill -s HUP $MAINPID
 
 [Install]
