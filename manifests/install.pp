@@ -9,13 +9,13 @@ class telly::install {
   unless $::telly_version =~ String[1] {
     fail ("telly_version is '${::telly_version}'")
   }
-  $package_name    = 'Jackett.Binaries.Mono'
+  $package_name    = 'telly.Binaries.Mono'
   $package_version = $::telly_version
   $install_path    = $::telly::install_path
-  $extract_dir     = "${install_path}/Jackett-${package_version}"
-  $creates         = "${extract_dir}/Jackett"
-  $link            = "${install_path}/Jackett"
-  $repository_url  = 'https://github.com/Jackett/Jackett/releases/download/'
+  $extract_dir     = "${install_path}/telly-${package_version}"
+  $creates         = "${extract_dir}/telly"
+  $link            = "${install_path}/telly"
+  $repository_url  = 'https://github.com/telly/telly/releases/download/'
   $package_source  = "${repository_url}/${package_version}/${package_name}.tar.gz"
   $archive_name    = "${package_name}-${package_version}.tar.gz"
   $archive_path    = "${install_path}/${archive_name}"
