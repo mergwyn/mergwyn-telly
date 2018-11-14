@@ -5,15 +5,18 @@
 # @example
 #   include telly
 class telly (
-  Boolean                 $package_manage = true,
-  Boolean                 $service_manage = true,
-  Boolean                 $service_active = true,
-  String                  $user           = 'telly',
-  String                  $group          = 'telly',
-  String                  $install_path   = '/opt',
-  String                  $config         = 'telly.config.toml',
-  Integer                 $port           = 6077,
-  Optional[Integer[1,10]] $keep           = 1,
+  Boolean                 $package_manage   = true,
+  Boolean                 $service_manage   = true,
+  Boolean                 $service_active   = true,
+  String                  $user             = 'telly',
+  String                  $group            = 'telly',
+  String                  $install_path     = '/opt',
+  String                  $config           = 'telly.config.toml',
+  Integer                 $streams          = 1,
+  Integer                 $starting_channel = 10000,
+  Integer                 $port             = 6077,
+  Optional[Integer[1,10]] $keep             = 1,
+  Optional[Array]         $sources          = undef,
   ) {
 
   contain telly::config
