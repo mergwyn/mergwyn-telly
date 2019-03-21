@@ -2,4 +2,4 @@
 #
 # Facts specified here will override the values provided by rspec-puppet-facts.
 ---
-telly_version: "1.2.3"
+xtelly_version: "1.2.3"
