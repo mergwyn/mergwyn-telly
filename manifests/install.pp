@@ -46,7 +46,7 @@ class telly::install {
     exec {'telly_tidy':
       cwd         => $install_path,
       path        => '/usr/sbin:/usr/bin:/sbin:/bin:',
-      command     => "ls -d ${link}-* | head -n -${telly::keep} | xargs rm -rf",
+      command     => "ls -dtr ${link}-* | head -n -${telly::keep} | xargs rm -rf",
       #onlyif      => "test $(ls -d ${link}-* | wc -l) -gt ${telly::keep}",
       refreshonly => true,
       subscribe   => Archive[$archive_name],
