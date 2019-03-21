@@ -8,6 +8,7 @@ class telly (
   Boolean                 $package_manage   = true,
   Boolean                 $service_manage   = true,
   Boolean                 $service_active   = true,
+  Boolean                 $service_enable   = true,
   String                  $user             = 'telly',
   String                  $group            = 'telly',
   String                  $install_path     = '/opt',

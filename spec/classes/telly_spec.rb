@@ -1,3 +1,4 @@
+# vim: syntax=ruby
 require 'spec_helper'
 
 describe 'telly' do
