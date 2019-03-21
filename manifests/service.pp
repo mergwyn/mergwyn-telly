@@ -5,7 +5,7 @@
 # @example
 #   include telly::service
 class telly::service {
-  if $telly::service_manage == true {
+  if $telly::service_manage {
     systemd::unit_file { 'telly.service':
       enable  => $telly::service_enable,
       active  => $telly::service_active,

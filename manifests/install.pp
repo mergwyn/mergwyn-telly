@@ -7,7 +7,7 @@
 class telly::install {
   # Make sure version has is a string with at least 1 char
   unless $::telly_version =~ String[1] {
-    fail ("telly_version is '${::telly_version}'")
+    fail ("telly_version must be a non zero length string '${::telly_version}'")
   }
   $package_name    = 'telly.Binaries.Mono'
   $package_version = $::telly_version
